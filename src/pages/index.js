@@ -19,4 +19,9 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Sukhdev | Portfolio</title>;
+export const Head = () => (
+  <>
+    <title>Sukhdev | Portfolio</title>
+    <link id='icon' rel='icon' href='../images/sk-logo-sm.png' />
+  </>
+);
