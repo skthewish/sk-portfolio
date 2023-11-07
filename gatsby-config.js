@@ -15,7 +15,7 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`, `webp`, `png`, `jpg`],
+          formats: [`auto`],
           placeholder: `none`,
         }
       }
@@ -27,6 +27,13 @@ module.exports = {
         path: './src/images/'
       },
       __key: 'images'
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        start_url: `/`,
+        icon: `src/images/sk-logo-sm.png`,
+      },
+    },
   ]
 };

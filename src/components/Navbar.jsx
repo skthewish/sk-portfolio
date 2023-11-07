@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import { navLinks } from '../constants';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -9,12 +10,11 @@ const Navbar = () => {
   return (
     <div className='container'>
       <nav className='container py-4 px-8 bg-background dark:bg-dark-background flex items-center justify-between fixed top-0 z-20'>
-        <h1
-          className='text-3xl font-bold text-txt dark:text-dark-txt'
-          onClick={() => setActive('/')}
-        >
-          <Link to={`/`}>SK</Link>
-        </h1>
+        <Link to={`/`}>
+          <div className='w-[80px]' onClick={() => setActive('/')}>
+            <StaticImage src='../images/sk-logo.png' alt='logo' />
+          </div>
+        </Link>
         <div className='flex items-center gap-10'>
           <ul className='list-none hidden sm:flex flex-row gap-10'>
             {navLinks.map((nav) => (
