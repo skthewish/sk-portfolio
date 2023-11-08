@@ -1,9 +1,10 @@
 import React from 'react';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
+
 import moonImg from '../images/moon.png';
 import sunImg from '../images/sun.png';
 
-const ThemeToggle = () => {
+const ThemeToggle = ({ changeTheme }) => {
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }) => (
@@ -11,8 +12,10 @@ const ThemeToggle = () => {
           onClick={() => {
             if (theme === 'dark') {
               toggleTheme('light');
+              changeTheme('light');
             } else {
               toggleTheme('dark');
+              changeTheme('dark');
             }
           }}
           className='h-8 w-8 p-1 dark:p-[6px] inline-block cursor-pointer border border-dark-background dark:border-background rounded-full'
