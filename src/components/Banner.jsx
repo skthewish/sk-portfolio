@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <section className='container min-h-screen w-full px-8 py-[68px] flex items-center justify-center'>
+    <section className='container relative min-h-screen w-full px-8 py-[68px] flex items-center justify-center'>
       <div className='text-center flex flex-col items-center'>
         <h1 className='text-6xl text-txt dark:text-dark-txt font-Agbalumo'>
           Hey! I'm <span className='text-amber font-Agbalumo'>Sukhdev</span>
@@ -16,19 +16,19 @@ const Banner = () => {
           <StaticImage src='../images/new-pc.png' alt='pc-screen' />
         </div>
       </div>
-			<div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+			<div className='absolute xs:bottom-10 bottom-4 w-full flex justify-center items-center'>
         <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+          <div className='w-[25px] h-[40px] rounded-3xl border-2 border-white flex justify-center items-start p-2'>
             <motion.div
               animate={{
-                y: [0, 24, 0],
+                y: [0, 12, 0],
               }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className='w-3 h-3 rounded-full bg-secondary mb-1'
+              className='w-2 h-2 rounded-full bg-white mb-1'
             />
           </div>
         </a>
