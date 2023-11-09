@@ -1,6 +1,6 @@
-import web from '../images/web.png';
-import website from '../images/website.png';
-import fullStack from '../images/full-stack.png';
+import web from '../images/web.svg';
+import website from '../images/website.svg';
+import fullStack from '../images/full-stack.svg';
 
 export const navLinks = [
   {
