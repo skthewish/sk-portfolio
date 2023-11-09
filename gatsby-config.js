@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `My Gatsby Site`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Sukhdev | Portfolio`,
+    siteUrl: `https://sukhdev.vercel.app/`
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -15,7 +15,7 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`],
+          formats: [`auto`, `png`],
           placeholder: `none`,
         }
       }
@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         start_url: `/`,
-        icon: `src/images/sk-logo-sm.png`,
+        icon: `src/images/logo-blue-sm.png`,
       },
     },
   ]

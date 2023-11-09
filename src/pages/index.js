@@ -4,16 +4,22 @@ import Banner from '../components/Banner';
 import About from '../components/About';
 import Work from '../components/Work';
 import Contact from '../components/Contact';
+import Experience from '../components/Experience';
+import Layout from '../components/Layout';
 
 const IndexPage = () => {
+
   return (
-    <div className='bg-background dark:bg-dark-background min-h-screen w-full relative z-0'>
-      <Navbar />
-      <Banner />
-      <About />
-      <Work />
-      <Contact />
-    </div>
+    <Layout>
+      <div className='bg-background dark:bg-dark-background min-h-screen w-full relative z-0'>
+        <Navbar />
+        <Banner />
+        <About />
+        <Experience />
+        <Work />
+        <Contact />
+      </div>
+    </Layout>
   );
 };
 
