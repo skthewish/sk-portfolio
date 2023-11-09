@@ -17,23 +17,30 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    colors: {
-      background: WHITE,
-      txt: SLATE700,
-      secondaryText: SLATE600,
-      white: WHITE,
-      black: BLACK,
-      amber: AMBER,
-      dark: {
-        background: BLACK,
-        txt: SLATE300,
-        secondaryText: SLATE400
-      }
-    },
     extend: {
+      colors: {
+        background: WHITE,
+        txt: SLATE700,
+        secondaryText: SLATE600,
+        amber: AMBER,
+        dark: {
+          background: BLACK,
+          txt: SLATE300,
+          secondaryText: SLATE400
+        }
+      },
       fontFamily: {
         Agbalumo: ['Agbalumo', 'Poppins']
-      }
+      },
+      boxShadow: {
+        card: "0px 35px 120px -15px #353343",
+      },
+      screens: {
+        xs: "450px",
+      },
+      backgroundImage: {
+        "hero-pattern": "url('/src/assets/herobg.png')",
+      },
     }
   },
   plugins: []
