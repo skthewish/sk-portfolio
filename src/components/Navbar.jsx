@@ -11,13 +11,13 @@ import useTheme from '../utils/useTheme';
 const Navbar = () => {
   const [active, setActive] = useState('/');
   const [toggle, setToggle] = useState(false);
-  const [theme, setTheme] = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className='container'>
       <nav className='container py-4 px-8 bg-background dark:bg-dark-background flex items-center justify-between fixed top-0 z-20'>
         <Link to={`/`}>
-          <div className='w-[80px]' onClick={() => setActive('/')} aria-hidden="true">
+          <div className='w-[80px]' onClick={() => setActive('/')} aria-hidden='true'>
             {theme === 'light' ? (
               <StaticImage src='../images/logo-blue.png' alt='logo' />
             ) : (
@@ -32,18 +32,16 @@ const Navbar = () => {
               <li
                 key={nav.id}
                 className={`${
-                  active === nav.title
-                    ? 'text-black dark:text-white'
-                    : 'text-secondaryText dark:text-dark-txt'
+                  active === nav.title ? 'text-black dark:text-white' : 'text-secondaryText dark:text-dark-txt'
                 } hover:text-black hover:dark:text-white text-[18px] font-medium cursor-pointer`}
                 onClick={() => setActive(nav.title)}
-                aria-hidden="true"
+                aria-hidden='true'
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
-          <ThemeToggle changeTheme={setTheme} />
+          <ThemeToggle />
 
           {/* Toggle Button Mobile View */}
           <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -52,7 +50,7 @@ const Navbar = () => {
               alt='menu'
               className='w-[28px] h-[28px] object-contain'
               onClick={() => setToggle(!toggle)}
-              aria-hidden="true"
+              aria-hidden='true'
             />
 
             <div
@@ -65,15 +63,13 @@ const Navbar = () => {
                   <li
                     key={nav.id}
                     className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                      active === nav.title
-                        ? 'text-black dark:text-white'
-                        : 'text-secondaryText dark:text-dark-txt'
+                      active === nav.title ? 'text-black dark:text-white' : 'text-secondaryText dark:text-dark-txt'
                     }`}
                     onClick={() => {
                       setToggle(!toggle);
                       setActive(nav.title);
                     }}
-                    aria-hidden="true"
+                    aria-hidden='true'
                   >
                     <a href={`#${nav.id}`}>{nav.title}</a>
                   </li>

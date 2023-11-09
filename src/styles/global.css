@@ -25,3 +25,16 @@
   background: -webkit-linear-gradient(to right, #434343, #000000);
   background: linear-gradient(to right, #434343, #000000);
 }
+
+.banner-head-text {
+  @apply text-4xl md:text-6xl text-txt dark:text-dark-txt font-Agbalumo;
+}
+.banner-sub-text {
+  @apply text-xl md:text-2xl md:leading-10 text-secondaryText dark:text-dark-secondaryText;
+}
+.section-head-text {
+  @apply text-3xl md:text-5xl text-txt dark:text-dark-txt font-Agbalumo;
+}
+.section-sub-text {
+  @apply text-secondaryText dark:text-dark-secondaryText text-xl md:text-2xl max-w-4xl 2xl:max-w-full leading-8 md:leading-10 2xl:leading-[50px];
+}

@@ -26,7 +26,8 @@ module.exports = {
         'dark-card': '0px 35px 120px -15px #353343'
       },
       screens: {
-        xs: '450px'
+        xs: '450px',
+        screen1174: '1174px',
       },
       backgroundImage: {
         'hero-pattern': "url('/src/assets/herobg.png')"

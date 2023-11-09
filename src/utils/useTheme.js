@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
 
 const useTheme = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme'));
-  return [theme, setTheme];
+  return useContext(ThemeContext);
 };
 
 export default useTheme;

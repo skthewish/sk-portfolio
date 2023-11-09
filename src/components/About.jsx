@@ -6,9 +6,9 @@ const About = () => {
   return (
     <section id='about' className='container min-h-screen w-full px-8 py-[68px] flex items-center justify-center'>
       <div className='text-center flex flex-col'>
-        <h1 className='text-4xl md:text-5xl 2xl:text-6xl text-txt dark:text-dark-txt font-Agbalumo'>Introduction</h1>
+        <h1 className='section-head-text'>Introduction</h1>
 
-        <p className='mt-8 dark:text-dark-secondaryText text-secondaryText text-xl md:text-2xl 2xl:text-3xl max-w-4xl 2xl:max-w-full leading-10 md:leading-10 2xl:leading-[50px]'>
+        <p className='section-sub-text mt-8'>
           I'm a skilled software developer with experience in designing and developing high-quality web applications
           that deliver exceptional user experiences, and expertise in frameworks like React.js, Next.js and Gatsby. I'm
           a quick learner and create <span className='text-txt dark:text-dark-txt'>efficient</span>,{' '}
