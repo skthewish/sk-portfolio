@@ -12,6 +12,7 @@ const Navbar = () => {
   const [active, setActive] = useState('/');
   const [toggle, setToggle] = useState(false);
   const { theme } = useTheme();
+  console.log(theme);
 
   return (
     <div className='container'>
@@ -45,13 +46,16 @@ const Navbar = () => {
 
           {/* Toggle Button Mobile View */}
           <div className='sm:hidden flex flex-1 justify-end items-center'>
-            <img
-              src={menuImg}
-              alt='menu'
+            <button
               className='w-[28px] h-[28px] object-contain'
               onClick={() => setToggle(!toggle)}
-              aria-hidden='true'
-            />
+            >
+            {theme === 'light' ? (
+              <StaticImage src='../images/icons/menu-dark.png' alt='menu' />
+            ) : (
+              <StaticImage src='../images/icons/menu-light.png' alt='menu' />
+            )}
+            </button>
 
             <div
               className={`${
@@ -63,7 +67,7 @@ const Navbar = () => {
                   <li
                     key={nav.id}
                     className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                      active === nav.title ? 'text-black dark:text-white' : 'text-secondaryText dark:text-dark-txt'
+                      active === nav.title ? 'dark:text-white' : 'text-dark-txt'
                     }`}
                     onClick={() => {
                       setToggle(!toggle);

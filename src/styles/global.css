@@ -38,3 +38,12 @@
 .section-sub-text {
   @apply text-secondaryText dark:text-dark-secondaryText text-xl md:text-2xl max-w-4xl 2xl:max-w-full leading-8 md:leading-10 2xl:leading-[50px];
 }
+.input {
+  @apply bg-slate-200 dark:bg-slate-800 py-4 px-6 text-secondaryText dark:text-dark-secondaryText rounded-lg outline-none border-none font-medium;
+}
+.input::placeholder {
+  @apply dark:text-slate-500;
+}
+.input-label {
+  @apply text-secondaryText dark:text-dark-secondaryText font-medium mb-1 text-left;
+}

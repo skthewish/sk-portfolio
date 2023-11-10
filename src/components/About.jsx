@@ -4,7 +4,7 @@ import { services } from '../constants';
 
 const About = () => {
   return (
-    <section id='about' className='container min-h-screen w-full px-8 py-[68px] flex items-center justify-center'>
+    <section id='about' className='container min-h-screen w-full px-8 pt-[68px] flex items-center justify-center'>
       <div className='text-center flex flex-col'>
         <h1 className='section-head-text'>Introduction</h1>
 
