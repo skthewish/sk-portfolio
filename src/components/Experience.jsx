@@ -8,7 +8,7 @@ import useTheme from '../utils/useTheme';
 const Experience = () => {
 	const { theme } = useTheme();
   return (
-    <section id='experience' className='container min-h-screen w-full p-8 flex items-center justify-center'>
+    <section id='experience' className='container min-h-screen w-full px-8 pt-[68px] flex items-center justify-center'>
       <div className='text-center flex flex-col items-center'>
         <h4 className='section-sub-text'>What I have done so far</h4>
         <h1 className='section-head-text'>Work Experience</h1>

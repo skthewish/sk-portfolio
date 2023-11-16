@@ -2,7 +2,6 @@ import * as React from 'react';
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import About from '../components/About';
-import Work from '../components/Work';
 import Contact from '../components/Contact';
 import Experience from '../components/Experience';
 import Layout from '../components/Layout';
@@ -16,7 +15,6 @@ const IndexPage = () => {
         <Banner />
         <About />
         <Experience />
-        <Work />
         <Contact />
       </div>
     </Layout>
