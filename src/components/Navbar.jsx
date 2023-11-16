@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import menuImg from '../images/icons/menu.svg';
 
 import ThemeToggle from './ThemeToggle';
 
@@ -12,7 +11,6 @@ const Navbar = () => {
   const [active, setActive] = useState('/');
   const [toggle, setToggle] = useState(false);
   const { theme } = useTheme();
-  console.log(theme);
 
   return (
     <div className='container'>
