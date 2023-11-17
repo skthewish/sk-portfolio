@@ -17,11 +17,8 @@ const Navbar = () => {
       <nav className='container py-4 px-8 bg-background dark:bg-dark-background flex items-center justify-between fixed top-0 z-20'>
         <Link to={`/`}>
           <div className='w-[80px]' onClick={() => setActive('/')} aria-hidden='true'>
-            {theme === 'light' ? (
-              <StaticImage src='../images/logo-blue.png' alt='logo' />
-            ) : (
-              <StaticImage src='../images/sk-logo.png' alt='logo' />
-            )}
+            {theme === 'light' && <StaticImage src='../images/logo-blue.png' alt='logo' />}
+            {theme === 'dark' && <StaticImage src='../images/sk-logo.png' alt='logo' />}
           </div>
         </Link>
 
@@ -44,15 +41,9 @@ const Navbar = () => {
 
           {/* Toggle Button Mobile View */}
           <div className='sm:hidden flex flex-1 justify-end items-center'>
-            <button
-              className='w-[28px] h-[28px] object-contain'
-              onClick={() => setToggle(!toggle)}
-            >
-            {theme === 'light' ? (
-              <StaticImage src='../images/icons/menu-dark.png' alt='menu' />
-            ) : (
-              <StaticImage src='../images/icons/menu-light.png' alt='menu' />
-            )}
+            <button className='w-[28px] h-[28px] object-contain' onClick={() => setToggle(!toggle)}>
+              {theme === 'light' && <StaticImage src='../images/icons/menu-dark.png' alt='logo' />}
+              {theme === 'dark' && <StaticImage src='../images/icons/menu-light.png' alt='logo' />}
             </button>
 
             <div

@@ -8,9 +8,12 @@ import useTheme from '../utils/useTheme';
 
 const ThemeToggle = () => {
   const { toggleTheme: changeTheme } = useTheme();
+  
   return (
     <ThemeToggler>
-      {({ theme, toggleTheme }) => (
+      {({ theme, toggleTheme }) => {
+        changeTheme(theme);
+        return (
         <button
           onClick={() => {
             if (theme === 'dark') {
@@ -30,7 +33,7 @@ const ThemeToggle = () => {
             <img src={sunImg} alt='light' className='object-contain' />
           )}
         </button>
-      )}
+      )}}
     </ThemeToggler>
   );
 };
