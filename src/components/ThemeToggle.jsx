@@ -15,10 +15,10 @@ const ThemeToggle = () => {
           onClick={() => {
             if (theme === 'dark') {
               toggleTheme('light');
-              changeTheme();
+              changeTheme('light');
             } else {
               toggleTheme('dark');
-              changeTheme();
+              changeTheme('dark');
             }
           }}
           className='h-8 w-8 p-1 dark:p-[6px] inline-block cursor-pointer border border-dark-background dark:border-background rounded-full'
