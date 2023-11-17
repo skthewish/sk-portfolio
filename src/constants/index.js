@@ -2,6 +2,8 @@ import web from '../images/web.svg';
 import website from '../images/website.svg';
 import fullStack from '../images/full-stack.svg';
 import quotedInfotech from '../images/QI.png';
+import hometales from '../images/hometales.png';
+import klimates from '../images/klimates.svg';
 
 export const navLinks = [
   {
@@ -11,6 +13,10 @@ export const navLinks = [
   {
     id: 'experience',
     title: 'Experience'
+  },
+  {
+    id: 'work',
+    title: 'Work'
   },
   {
     id: 'contact',
@@ -44,7 +50,7 @@ export const experiences = [
     iconBg: '#E6DEDD',
     date: 'Oct 2021 - Dec 2022',
     points: [
-      'Responsible to manage Responsive Frontend Design, Integrating API (with 3rd party APIs i.e. Google API, Social Login ), Manage Redux state, I18n, etc. using Next.js, React.js, HTML, CSS, Bootstrap. Correcting the backend part as per requirements',
+      'Responsible to manage Responsive Frontend Design, Integrating API (with 3rd party APIs i.e. Google API, Social Login), Manage Redux state, I18n, etc. using Next.js, React.js, HTML, CSS, Bootstrap. Correcting the backend part as per requirements',
       'Created REST API using Service Layer Architecture and backend technologies - Node.js, Express.js, PostgreSQL, Knex.js, Redis',
       'Lead, Managed and guided freshers in their training'
     ]
@@ -61,5 +67,25 @@ export const experiences = [
       'Implementing responsive design, scalable and efficient solutions on time',
       'Participating in code reviews and providing constructive feedback to other developers.'
     ]
+  }
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: `Home Tales`,
+    icon: hometales,
+    link: `https://hometales.eu/`
+  },
+  {
+    id: 2,
+    title: `Klimates Web App`,
+    icon: klimates
+  },
+  {
+    id: 3,
+    title: `Klimates Landing Page`,
+    icon: klimates,
+    link: `https://www.klimates.earth/`
   }
 ];

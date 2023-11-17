@@ -1,7 +1,7 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { motion } from 'framer-motion';
-import Avatar from './Avatar';
+import Avatar from './atomic/Avatar';
+import pc from '../images/pc.png';
 
 const Banner = () => {
   return (
@@ -15,7 +15,7 @@ const Banner = () => {
           I Develop Responsive User Interfaces <br className='hidden md:block lg:hidden' /> and Web Applications
         </h6>
         <div className='w-full md:w-[80%] lg:max-w-[75%] mt-[60px] sm:mt-10'>
-          <StaticImage src='../images/pc.png' alt='pc-screen' />
+          <img src={pc} alt='pc-screen' />
         </div>
       </div>
       <div className='hidden absolute xs:bottom-10 bottom-4 w-full md:flex justify-center items-center'>

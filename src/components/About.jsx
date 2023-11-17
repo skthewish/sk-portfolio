@@ -1,6 +1,7 @@
 import React from 'react';
-import { Tilt } from 'react-tilt';
+
 import { services } from '../constants';
+import Card from './atomic/Card';
 
 const About = () => {
   return (
@@ -22,14 +23,14 @@ const About = () => {
 
         <div className='flex flex-col md:flex-row gap-8 justify-center items-center mt-8'>
           {services.map((service) => (
-            <Tilt className='w-full max-w-[300px] md:w-[200px]' key={service.id}>
-              <div className='w-full border border-slate-700 dark:border-slate-300 p-8 rounded-[20px] shadow-card dark:shadow-dark-card flex md:flex-col justify-center items-center gap-8'>
+            <Card className='w-full max-w-[300px] md:w-[200px]'>
+              <div className='w-full flex md:flex-col justify-center items-center gap-8'>
                 <div className='w-[80px] md:w-[100px] h-[80px] md:h-[100px] grid items-center'>
                   <img src={service.icon} alt={service.title} className='object-contain' />
                 </div>
                 <h4 className='whitespace-pre-line text-txt dark:text-dark-txt font-bold'>{service.title}</h4>
               </div>
-            </Tilt>
+            </Card>
           ))}
         </div>
       </div>

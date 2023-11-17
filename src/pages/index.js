@@ -5,6 +5,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 import Experience from '../components/Experience';
 import Layout from '../components/Layout';
+import Work from '../components/Work';
 
 const IndexPage = () => {
 
@@ -15,6 +16,7 @@ const IndexPage = () => {
         <Banner />
         <About />
         <Experience />
+        <Work />
         <Contact />
       </div>
     </Layout>

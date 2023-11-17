@@ -65,9 +65,9 @@ const Contact = () => {
       <div className='text-center flex flex-col items-center'>
         <h1 className='section-head-text'>Get in touch</h1>
 
-        <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className='flex-[0.75] bg-black-100 p-8 rounded-2xl'>
+        <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className=' bg-black-100 py-8 md:p-8 rounded-2xl'>
           <form ref={formRef} onSubmit={handleSubmit} className='flex gap-4 max-w-5xl flex-col'>
-            <div className='flex gap-4 flex-wrap'>
+            <div className='flex gap-4 flex-col sm:flex-row flex-wrap'>
               <label className='flex flex-col flex-1'>
                 <span className='input-label'>Your Name</span>
                 <input
@@ -90,18 +90,18 @@ const Contact = () => {
                   className='input'
                 />
               </label>
-              <label className='flex flex-col flex-1'>
-                <span className='input-label'>Your Message</span>
-                <textarea
-                  rows={4}
-                  name='message'
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder='What you want to say?'
-                  className='input'
-                />
-              </label>
             </div>
+            <label className='flex flex-col flex-1'>
+              <span className='input-label'>Your Message</span>
+              <textarea
+                rows={4}
+                name='message'
+                value={form.message}
+                onChange={handleChange}
+                placeholder='What you want to say?'
+                className='input'
+              />
+            </label>
 
             <button
               type='submit'
