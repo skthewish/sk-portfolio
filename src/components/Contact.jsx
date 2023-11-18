@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { slideIn } from '../utils/motion';
 import emailjs from '@emailjs/browser';
+import { socialLinks } from '../constants';
+import { Link } from 'gatsby';
 
 const Contact = () => {
   const formRef = useRef();
@@ -65,7 +67,7 @@ const Contact = () => {
       <div className='text-center flex flex-col items-center'>
         <h1 className='section-head-text'>Get in touch</h1>
 
-        <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className=' bg-black-100 py-8 md:p-8 rounded-2xl'>
+        <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className='py-8 md:p-8'>
           <form ref={formRef} onSubmit={handleSubmit} className='flex gap-4 max-w-5xl flex-col'>
             <div className='flex gap-4 flex-col sm:flex-row flex-wrap'>
               <label className='flex flex-col flex-1'>
@@ -110,6 +112,16 @@ const Contact = () => {
               {loading ? 'Sending...' : 'Send'}
             </button>
           </form>
+        </motion.div>
+
+        <motion.div variants={slideIn(0.2, 1)} className='py-8 md:p-8'>
+          <div className='flex gap-10'>
+            {socialLinks.map((item) => (
+              <Link to={item.link} target='_blank' rel='noopener noreferrer'>
+                <img src={item.icon} alt={item.id} key={item.id} className='h-10 md:h-[60px]' />
+              </Link>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

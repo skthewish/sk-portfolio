@@ -5,6 +5,46 @@ import quotedInfotech from '../images/QI.png';
 import hometales from '../images/hometales.png';
 import klimates from '../images/klimates.svg';
 
+import klimatesLandingHome from '../images/klimates-landing/home.png';
+import klimatesLandingProjects from '../images/klimates-landing/projects.png';
+import klimatesLandingBusiness from '../images/klimates-landing/business.png';
+import klimatesLandingIndividual from '../images/klimates-landing/individuals.png';
+
+import klimatesAppUserSignIn from '../images/klimates-app/klimates-sign-in.png';
+import klimatesAppUserSignUp from '../images/klimates-app/klimates-sign-up.png';
+import klimatesAppUserDashboard from '../images/klimates-app/user-dashboard.png';
+import klimatesAppUserSubscribe from '../images/klimates-app/user-subscribe.png';
+import klimatesAppUserBuyOneTime from '../images/klimates-app/user-buy-one-time.png';
+import klimatesAppUserProjects from '../images/klimates-app/user-projects.png';
+import klimatesAppUserProjectDetails from '../images/klimates-app/user-project-details.png';
+import klimatesAppUserGiftImpact from '../images/klimates-app/user-gift-impact.png';
+import klimatesAppUserGiftRedeem from '../images/klimates-app/user-gift-redeem.png';
+import klimatesAppBusinessDashboard from '../images/klimates-app/business-dashboard.png';
+import klimatesAppBusinessCampaign from '../images/klimates-app/business-campaign.png';
+import klimatesAppBusinessCampaignDetails from '../images/klimates-app/business-campaign-details.png';
+import klimatesAppBusinessCampaignCreate from '../images/klimates-app/business-create-campaign.png';
+import klimatesAppBusinessProfileSettings from '../images/klimates-app/business-profile-settings.png';
+
+import hometalesHome from '../images/hometales/hometales-home.png';
+import hometalesHomeNl from '../images/hometales/hometales-home-nl.png';
+import hometalesProfessionals from '../images/hometales/hometales-professionals.png';
+import tales from '../images/hometales/tales.png';
+import talesNl from '../images/hometales/tales-nl.png';
+import search from '../images/hometales/search.png';
+import searchList from '../images/hometales/search-list.png';
+import searchFilter from '../images/hometales/search-filter.png';
+import messages from '../images/hometales/messages.png';
+import connections from '../images/hometales/connections.png';
+import homeprofileDetails from '../images/hometales/homeprofile-details.png';
+import favoriteHomes from '../images/hometales/favorite-homes.png';
+import notifications from '../images/hometales/notifications.png';
+import userProfile from '../images/hometales/user-profile.png';
+import hometalesBlogDetails from '../images/hometales/hometales-blog-details.png';
+
+import linkedInIcon from '../images/icons/linkedin.png';
+import githubIcon from '../images/icons/github.png';
+import instagramIcon from '../images/icons/instagram.png';
+
 export const navLinks = [
   {
     id: 'about',
@@ -75,17 +115,74 @@ export const projects = [
     id: 1,
     title: `Home Tales`,
     icon: hometales,
-    link: `https://hometales.eu/`
+    link: `https://hometales.eu/`,
+    images: [
+      { src: hometalesHome },
+      { src: hometalesHomeNl },
+      { src: hometalesProfessionals },
+      { src: tales },
+      { src: talesNl },
+      { src: search },
+      { src: searchList },
+      { src: searchFilter },
+      { src: messages },
+      { src: connections },
+      { src: homeprofileDetails },
+      { src: favoriteHomes },
+      { src: notifications },
+      { src: userProfile },
+      { src: hometalesBlogDetails }
+    ]
   },
   {
     id: 2,
     title: `Klimates Web App`,
-    icon: klimates
+    icon: klimates,
+    images: [
+      { src: klimatesAppUserSignIn },
+      { src: klimatesAppUserSignUp },
+      { src: klimatesAppUserDashboard },
+      { src: klimatesAppUserSubscribe },
+      { src: klimatesAppUserBuyOneTime },
+      { src: klimatesAppUserProjects },
+      { src: klimatesAppUserProjectDetails },
+      { src: klimatesAppUserGiftImpact },
+      { src: klimatesAppUserGiftRedeem },
+      { src: klimatesAppBusinessDashboard },
+      { src: klimatesAppBusinessCampaign },
+      { src: klimatesAppBusinessCampaignDetails },
+      { src: klimatesAppBusinessCampaignCreate },
+      { src: klimatesAppBusinessProfileSettings }
+    ]
   },
   {
     id: 3,
     title: `Klimates Landing Page`,
     icon: klimates,
-    link: `https://www.klimates.earth/`
+    link: `https://www.klimates.earth/`,
+    images: [
+      { src: klimatesLandingHome },
+      { src: klimatesLandingProjects },
+      { src: klimatesLandingBusiness },
+      { src: klimatesLandingIndividual }
+    ]
   }
+];
+
+export const socialLinks = [
+  {
+    id: 'linkedin',
+    icon: linkedInIcon,
+    link: `https://www.linkedin.com/in/sukhdev-kanjariya`,
+  },
+  {
+    id: 'github',
+    icon: githubIcon,
+    link: `https://github.com/skthewish`,
+  },
+  {
+    id: 'instagram',
+    icon: instagramIcon,
+    link: `https://instagram.com/iamsk_.04?igshid=MzMyNGUyNmU2YQ==`,
+  },
 ];
