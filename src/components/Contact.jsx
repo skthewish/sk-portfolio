@@ -1,12 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { slideIn } from '../utils/motion';
+import { bounceUp, zoomIn } from '../utils/motion';
 import emailjs from '@emailjs/browser';
 import { socialLinks } from '../constants';
 import { Link } from 'gatsby';
+import useTheme from '../utils/useTheme';
 
 const Contact = () => {
   const formRef = useRef();
+  const { theme } = useTheme();
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -65,10 +67,24 @@ const Contact = () => {
   return (
     <section id='contact' className='container w-full px-8 pt-[68px] flex items-center justify-center'>
       <div className='text-center flex flex-col items-center'>
-        <h1 className='section-head-text'>Get in touch</h1>
+        <motion.div initial='offscreen' whileInView='onscreen' viewport={{ once: true, amount: 0.6 }}>
+          <motion.h1 variants={zoomIn(0, 1)} className='section-head-text'>
+            Get in touch
+          </motion.h1>
+        </motion.div>
 
-        <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className='py-8 md:p-8'>
-          <form ref={formRef} onSubmit={handleSubmit} className='flex gap-4 max-w-5xl flex-col'>
+        <motion.div
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.6 }}
+          className='py-8 md:p-8'
+        >
+          <motion.form
+            variants={zoomIn(0, 1)}
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className='flex gap-4 max-w-5xl flex-col'
+          >
             <div className='flex gap-4 flex-col sm:flex-row flex-wrap'>
               <label className='flex flex-col flex-1'>
                 <span className='input-label'>Your Name</span>
@@ -111,14 +127,30 @@ const Contact = () => {
             >
               {loading ? 'Sending...' : 'Send'}
             </button>
-          </form>
+          </motion.form>
         </motion.div>
 
-        <motion.div variants={slideIn(0.2, 1)} className='py-8 md:p-8'>
+        <motion.div
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.8 }}
+          className='py-8 md:p-8'
+        >
           <div className='flex gap-10'>
             {socialLinks.map((item) => (
               <Link to={item.link} target='_blank' rel='noopener noreferrer'>
-                <img src={item.icon} alt={item.id} key={item.id} className='h-10 md:h-[60px]' />
+                <motion.div variants={bounceUp(50, 0, 0.4, 1)}>
+                  {item.id === 'github' ? (
+                    <img
+                      src={theme === 'light' ? item.icon : item.darkThemeIcon}
+                      alt={item.id}
+                      key={item.id}
+                      className='h-10 md:h-[60px]'
+                    />
+                  ) : (
+                    <img src={item.icon} alt={item.id} key={item.id} className='h-10 md:h-[60px]' />
+                  )}
+                </motion.div>
               </Link>
             ))}
           </div>

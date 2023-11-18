@@ -43,6 +43,7 @@ import hometalesBlogDetails from '../images/hometales/hometales-blog-details.png
 
 import linkedInIcon from '../images/icons/linkedin.png';
 import githubIcon from '../images/icons/github.png';
+import githubBlackIcon from '../images/icons/github-black.png';
 import instagramIcon from '../images/icons/instagram.png';
 
 export const navLinks = [
@@ -177,7 +178,8 @@ export const socialLinks = [
   },
   {
     id: 'github',
-    icon: githubIcon,
+    icon: githubBlackIcon,
+    darkThemeIcon: githubIcon,
     link: `https://github.com/skthewish`,
   },
   {

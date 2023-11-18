@@ -1,16 +1,49 @@
-export const fadeIn = (direction, type, delay, duration) => {
+const springTransition = {
+  type: 'spring',
+  bounce: 0.4,
+  duration: 1
+};
+
+export const bounceUp = (from, delay, bounce, duration) => ({
+  offscreen: {
+    y: from,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      delay: delay,
+      bounce: bounce,
+      duration: duration
+    }
+  }
+});
+
+export const slideIn = {
+  offscreen: {
+    x: '-100%',
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: springTransition
+  }
+};
+
+export const zoomIn = (delay, duration) => {
   return {
-    hidden: {
-      x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-      y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
+    offscreen: {
+      scale: 0,
       opacity: 0
     },
-    show: {
-      x: 0,
-      y: 0,
+    onscreen: {
+      scale: 1,
       opacity: 1,
       transition: {
-        type: type,
+        type: 'tween',
         delay: delay,
         duration: duration,
         ease: 'easeOut'
@@ -19,40 +52,19 @@ export const fadeIn = (direction, type, delay, duration) => {
   };
 };
 
-export const slideIn = (direction, type, delay, duration) => {
+export const ease = (delay, duration) => {
   return {
-    hidden: {
-      x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
-      y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
+    offscreen: {
+      opacity: 0
     },
-    show: {
-      x: 0,
-      y: 0,
-      transition: {
-        type: type,
-        delay: delay,
-        duration: duration,
-        ease: "easeOut",
-      },
-    },
-  };
-};
-
-export const zoomIn = (delay, duration) => {
-  return {
-    hidden: {
-      scale: 0,
-      opacity: 0,
-    },
-    show: {
-      scale: 1,
+    onscreen: {
       opacity: 1,
       transition: {
-        type: "tween",
+        type: 'tween',
         delay: delay,
         duration: duration,
-        ease: "easeOut",
-      },
-    },
+        ease: 'easeOut'
+      }
+    }
   };
 };
