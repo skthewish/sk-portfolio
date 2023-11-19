@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Avatar from './atomic/Avatar';
-import pc from '../images/pc.png';
 import { ease, zoomIn } from '../utils/motion';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Banner = () => {
   return (
@@ -27,7 +27,7 @@ const Banner = () => {
           </h6>
         </motion.div>
         <motion.div variants={ease(1, 1)} className='w-full md:w-[80%] lg:max-w-[75%] mt-[60px] sm:mt-10'>
-          <img src={pc} alt='pc-screen' />
+          <StaticImage src={'../images/pc.png'} alt='pc-screen' />
         </motion.div>
       </motion.div>
       <div className='hidden absolute xs:bottom-10 bottom-4 w-full md:flex justify-center items-center'>
