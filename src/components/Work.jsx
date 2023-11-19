@@ -10,8 +10,8 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import { projects } from '../constants';
 import Card from './atomic/Card';
 import gallery from '../images/icons/gallery.png';
-import goTo from '../images/icons/go-to.png';
 import { bounceUp, zoomIn } from '../utils/motion';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Work = () => {
   const [open, setOpen] = React.useState(false);
@@ -32,7 +32,13 @@ const Work = () => {
 
         <div className='flex flex-col md:flex-row gap-8 justify-center items-center mt-[50px]'>
           {projects.map((project, i) => (
-            <motion.div variants={bounceUp(50, 0.1 * i, 0.4, 1)} className='w-full'>
+            <motion.div 
+              initial='offscreen'
+              whileInView='onscreen'
+              viewport={{ once: true, amount: 0.6 }} 
+              variants={bounceUp(50, 0.1 * i, 0.4, 1)} 
+              className='w-full'
+            >
               <Card key={project.id} className='w-full md:w-[200px] lg:w-[300px] md:h-[250px] lg:h-fit'>
                 <div className='w-full h-full flex md:flex-col justify-center items-center gap-8 relative'>
                   <button
@@ -57,9 +63,9 @@ const Work = () => {
                       to={project.link}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='absolute bottom-[-24px] right-[-24px]'
+                      className='absolute bottom-[-24px] right-[-24px] h-4 w-4 m-2'
                     >
-                      <img src={goTo} alt='go to' className='h-4 m-2' />
+                      <StaticImage src={'../images/icons/go-to.png'} alt='go to' />
                     </Link>
                   )}
                 </div>

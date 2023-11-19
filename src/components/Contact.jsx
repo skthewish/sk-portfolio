@@ -66,7 +66,7 @@ const Contact = () => {
 
   return (
     <section id='contact' className='container w-full px-8 pt-[68px] flex items-center justify-center'>
-      <div className='text-center flex flex-col items-center'>
+      <div className='text-center flex flex-col items-center w-full'>
         <motion.div initial='offscreen' whileInView='onscreen' viewport={{ once: true, amount: 0.6 }}>
           <motion.h1 variants={zoomIn(0, 1)} className='section-head-text'>
             Get in touch
@@ -76,14 +76,14 @@ const Contact = () => {
         <motion.div
           initial='offscreen'
           whileInView='onscreen'
-          viewport={{ once: true, amount: 0.6 }}
-          className='py-8 md:p-8'
+          viewport={{ once: true, amount: 0.3 }}
+          className='py-8 md:p-8 w-full'
         >
           <motion.form
             variants={zoomIn(0, 1)}
             ref={formRef}
             onSubmit={handleSubmit}
-            className='flex gap-4 max-w-5xl flex-col'
+            className='flex gap-4 max-w-4xl flex-col mx-auto'
           >
             <div className='flex gap-4 flex-col sm:flex-row flex-wrap'>
               <label className='flex flex-col flex-1'>
@@ -94,7 +94,7 @@ const Contact = () => {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="What's your good name?"
-                  className='input'
+                  className='input w-full'
                 />
               </label>
               <label className='flex flex-col flex-1'>
@@ -105,7 +105,7 @@ const Contact = () => {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="What's your web address?"
-                  className='input'
+                  className='input flex-1'
                 />
               </label>
             </div>
