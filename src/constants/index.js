@@ -38,7 +38,6 @@ import connections from '../images/hometales/connections.png';
 import homeprofileDetails from '../images/hometales/homeprofile-details.png';
 import favoriteHomes from '../images/hometales/favorite-homes.png';
 import notifications from '../images/hometales/notifications.png';
-import userProfile from '../images/hometales/user-profile.png';
 import hometalesBlogDetails from '../images/hometales/hometales-blog-details.png';
 
 import linkedInIcon from '../images/icons/linkedin.png';
@@ -131,7 +130,6 @@ export const projects = [
       { src: homeprofileDetails },
       { src: favoriteHomes },
       { src: notifications },
-      { src: userProfile },
       { src: hometalesBlogDetails }
     ]
   },
