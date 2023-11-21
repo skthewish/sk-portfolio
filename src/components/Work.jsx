@@ -25,8 +25,14 @@ const Work = () => {
       className='container w-full px-8 pt-[68px] lg:pb-[50px] flex items-center justify-center'
     >
       <div className='text-center flex flex-col items-center'>
-        <motion.h1 variants={zoomIn(0, 1)} className='section-head-text'>
-          What I have done so far
+        <motion.h1
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.6 }}
+          variants={zoomIn(0, 1)}
+          className='section-head-text'
+        >
+          Projects
         </motion.h1>
 
         <div className='flex flex-col lg:flex-row gap-8 justify-center items-center mt-[50px]'>
