@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { bounceUp, zoomIn } from '../utils/motion';
 import emailjs from '@emailjs/browser';
 import { socialLinks } from '../constants';
-import { Link } from 'gatsby';
 import useTheme from '../utils/useTheme';
 
 const Contact = () => {
@@ -138,7 +137,7 @@ const Contact = () => {
         >
           <div className='flex gap-10'>
             {socialLinks.map((item) => (
-              <Link to={item.link} target='_blank' rel='noopener noreferrer'>
+              <a href={item.link} target='_blank' rel='noopener noreferrer' key={item.id}>
                 <motion.div variants={bounceUp(50, 0, 0.4, 1)}>
                   {item.id === 'github' ? (
                     <img
@@ -151,7 +150,7 @@ const Contact = () => {
                     <img src={item.icon} alt={item.id} key={item.id} className='h-10 md:h-[60px]' />
                   )}
                 </motion.div>
-              </Link>
+              </a>
             ))}
           </div>
         </motion.div>

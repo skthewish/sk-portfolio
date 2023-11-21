@@ -46,6 +46,17 @@ import githubIcon from '../images/icons/github.png';
 import githubBlackIcon from '../images/icons/github-black.png';
 import instagramIcon from '../images/icons/instagram.png';
 
+import reactJSIcon from '../images/icons/react-js.png';
+import nextJSIcon from '../images/icons/next-js.png';
+import gatsbyJSIcon from '../images/icons/gatsby-js.png';
+import reactHookFormIcon from '../images/icons/react-hook-form.png';
+import reduxIcon from '../images/icons/redux.png';
+import bootstrapIcon from '../images/icons/bootstrap.png';
+import muiIcon from '../images/icons/mui.png';
+import graphqlIcon from '../images/icons/graphql.png';
+import socketIOIcon from '../images/icons/socket-io.png';
+import reactRouterIcon from '../images/icons/react-router.png';
+
 export const navLinks = [
   {
     id: 'about',
@@ -92,7 +103,10 @@ export const experiences = [
     date: 'Oct 2021 - Dec 2022',
     points: [
       'Responsible to manage Responsive Frontend Design, Integrating API (with 3rd party APIs i.e. Google API, Social Login), Manage Redux state, I18n, etc. using Next.js, React.js, HTML, CSS, Bootstrap. Correcting the backend part as per requirements',
+      'Converting the static design into an interactive frontend using cutting-edge technologies.',
       'Created REST API using Service Layer Architecture and backend technologies - Node.js, Express.js, PostgreSQL, Knex.js, Redis',
+      'Develop database schema as per the project/task requirement.',
+      'Design project architecture along with senior managers.',
       'Lead, Managed and guided freshers in their training'
     ]
   },
@@ -106,7 +120,11 @@ export const experiences = [
       'Responsible for developing and maintaining web applications, helping internal and external technical challenges and bug fixes using React.js and other related technologies.',
       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
       'Implementing responsive design, scalable and efficient solutions on time',
-      'Participating in code reviews and providing constructive feedback to other developers.'
+      'Communicate with the client and team members to gather the requirements and resolve any queries.',
+      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Help management create playbooks for various processes.',
+      'Help Jr. developers in project planning and execution.',
+      'Train, guide and monitor interns and their performance.'
     ]
   }
 ];
@@ -133,7 +151,8 @@ export const projects = [
       { src: notifications },
       { src: userProfile },
       { src: hometalesBlogDetails }
-    ]
+    ],
+    techIcons: [nextJSIcon, bootstrapIcon, reactHookFormIcon, reduxIcon, socketIOIcon]
   },
   {
     id: 2,
@@ -154,7 +173,8 @@ export const projects = [
       { src: klimatesAppBusinessCampaignDetails },
       { src: klimatesAppBusinessCampaignCreate },
       { src: klimatesAppBusinessProfileSettings }
-    ]
+    ],
+    techIcons: [reactJSIcon, muiIcon, reactHookFormIcon, reduxIcon, reactRouterIcon]
   },
   {
     id: 3,
@@ -166,7 +186,8 @@ export const projects = [
       { src: klimatesLandingProjects },
       { src: klimatesLandingBusiness },
       { src: klimatesLandingIndividual }
-    ]
+    ],
+    techIcons: [gatsbyJSIcon, muiIcon, graphqlIcon]
   }
 ];
 
@@ -174,17 +195,17 @@ export const socialLinks = [
   {
     id: 'linkedin',
     icon: linkedInIcon,
-    link: `https://www.linkedin.com/in/sukhdev-kanjariya`,
+    link: `https://www.linkedin.com/in/sukhdev-kanjariya`
   },
   {
     id: 'github',
     icon: githubBlackIcon,
     darkThemeIcon: githubIcon,
-    link: `https://github.com/skthewish`,
+    link: `https://github.com/skthewish`
   },
   {
     id: 'instagram',
     icon: instagramIcon,
-    link: `https://instagram.com/iamsk_.04?igshid=MzMyNGUyNmU2YQ==`,
-  },
+    link: `https://instagram.com/iamsk_.04?igshid=MzMyNGUyNmU2YQ==`
+  }
 ];
