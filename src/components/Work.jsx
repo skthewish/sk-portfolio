@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
 import Lightbox from 'yet-another-react-lightbox';
+import { StaticImage } from 'gatsby-plugin-image';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 import 'yet-another-react-lightbox/styles.css';
@@ -11,7 +11,6 @@ import { projects } from '../constants';
 import Card from './atomic/Card';
 import gallery from '../images/icons/gallery.png';
 import { bounceUp, zoomIn } from '../utils/motion';
-import { StaticImage } from 'gatsby-plugin-image';
 
 const Work = () => {
   const [open, setOpen] = React.useState(false);
@@ -26,21 +25,28 @@ const Work = () => {
       className='container w-full px-8 pt-[68px] lg:pb-[50px] flex items-center justify-center'
     >
       <div className='text-center flex flex-col items-center'>
-        <motion.h1 variants={zoomIn(0, 1)} className='section-head-text'>
-          What I have done so far
+        <motion.h1
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.6 }}
+          variants={zoomIn(0, 1)}
+          className='section-head-text'
+        >
+          Projects
         </motion.h1>
 
-        <div className='flex flex-col md:flex-row gap-8 justify-center items-center mt-[50px]'>
+        <div className='flex flex-col lg:flex-row gap-8 justify-center items-center mt-[50px]'>
           {projects.map((project, i) => (
-            <motion.div 
+            <motion.div
               initial='offscreen'
               whileInView='onscreen'
-              viewport={{ once: true, amount: 0.6 }} 
-              variants={bounceUp(50, 0.1 * i, 0.4, 1)} 
+              viewport={{ once: true, amount: 0.6 }}
+              variants={bounceUp(50, 0.1 * i, 0.4, 1)}
               className='w-full'
+              key={project.id}
             >
-              <Card key={project.id} className='w-full md:w-[200px] lg:w-[300px] md:h-[250px] lg:h-fit'>
-                <div className='w-full h-full flex md:flex-col justify-center items-center gap-8 relative'>
+              <Card className='w-full lg:w-[300px] lg:h-fit'>
+                <div className='w-full h-full flex flex-col sm:flex-row lg:flex-col justify-center items-center gap-8 relative'>
                   <button
                     onClick={() => {
                       setOpen(true);
@@ -53,20 +59,30 @@ const Work = () => {
                     </div>
                   </button>
 
-                  <h4 className='whitespace-pre-line text-txt dark:text-dark-txt font-bold flex-1 flex items-center justify-center'>
-                    <Link to={project.link} target='_blank' rel='noopener noreferrer'>
-                      {project.title}
-                    </Link>
-                  </h4>
+                  <div>
+                    <h4 className='whitespace-pre-line text-txt dark:text-dark-txt font-bold flex-1 flex items-center justify-center'>
+                      <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                        {project.title}
+                      </a>
+                    </h4>
+
+                    <div className='flex gap-3 mt-2 justify-center flex-wrap'>
+                      {project.techIcons.map((icon, i) => (
+                        <div className='w-6 h-6 grid items-center bg-background p-1 rounded-lg' key={i}>
+                          <img src={icon} alt='tech icon' />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                   {project.link && (
-                    <Link
-                      to={project.link}
+                    <a
+                      href={project.link}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='absolute bottom-[-24px] right-[-24px] h-4 w-4 m-2'
+                      className='absolute top-[-24px] right-[-24px] h-4 w-4 m-2'
                     >
                       <StaticImage src={'../images/icons/go-to.png'} alt='go to' />
-                    </Link>
+                    </a>
                   )}
                 </div>
               </Card>

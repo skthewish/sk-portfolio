@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className='container'>
       <nav className='container py-4 px-8 bg-background dark:bg-dark-background flex items-center justify-between fixed top-0 z-20'>
         <Link to={`/`}>
-          <div className='w-[80px]' onClick={() => setActive('/')} aria-hidden='true'>
+          <div className='w-[60px] sm:w-[80px]' onClick={() => setActive('/')} aria-hidden='true'>
             {theme === 'light' && <img src={logoBlue} alt='logo' />}
             {theme === 'dark' && <img src={logoLight} alt='logo' />}
           </div>
