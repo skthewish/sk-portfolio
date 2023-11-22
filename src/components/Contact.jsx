@@ -28,6 +28,14 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { name, email, message } = form;
+
+    if (!name || !email || !message) {
+      return alert('Please fill up all the details');
+    }
+    if (!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+      return alert('Please enter valid email');
+    }
     setLoading(true);
 
     emailjs
