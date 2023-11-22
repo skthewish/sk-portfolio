@@ -42,7 +42,7 @@ const IndexPage = () => {
         <Work />
         <Contact />
         <div className='fixed bottom-2 sm:bottom-5 right-2 sm:right-5 gap-2 flex flex-col'>
-          <a href={resumeFile} download='Sukhdev-CV.pdf'>
+          <a href={resumeFile} download='Sukhdev-CV.pdf' className='inline-block md:hidden'>
             <IconButton className='p-3 w-10 sm:w-[50px] h-10 sm:h-[50px]'>
               <StaticImage src={'../images/icons/resume.png'} alt='resume' />
             </IconButton>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import ThemeToggle from './atomic/ThemeToggle';
+import IconButton from './atomic/Button';
 
 import { navLinks } from '../constants';
 import useTheme from '../utils/useTheme';
@@ -10,6 +12,8 @@ import logoBlue from '../images/logo-blue.png';
 import logoLight from '../images/sk-logo.png';
 import menuDark from '../images/icons/menu-dark.png';
 import menuLight from '../images/icons/menu-light.png';
+
+import resumeFile from '../assets/sukhdev-cv.pdf';
 
 const Navbar = () => {
   const [active, setActive] = useState('/');
@@ -41,7 +45,14 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+
           <ThemeToggle />
+
+          <a href={resumeFile} download='Sukhdev-CV.pdf' className='hidden md:inline-block'>
+            <IconButton className='p-2 w-8 h-8'>
+              <StaticImage src={'../images/icons/resume.png'} alt='resume' />
+            </IconButton>
+          </a>
 
           {/* Toggle Button Mobile View */}
           <div className='sm:hidden flex flex-1 justify-end items-center'>
