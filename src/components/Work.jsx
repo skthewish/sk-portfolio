@@ -54,8 +54,8 @@ const Work = () => {
                     }}
                   >
                     <div className='w-[100px] h-[100px] rounded-full border border-black dark:border-white bg-background grid items-center p-5 relative cursor-pointer'>
-                      <img src={project.icon} alt='me' className='object-cover w-full' />
-                      <img src={gallery} alt='photos' className='h-7 absolute bottom-0 right-0' />
+                      <img src={project.icon} alt='me' className='object-cover w-full' loading="lazy" />
+                      <img src={gallery} alt='photos' className='h-7 absolute bottom-0 right-0' loading="lazy" />
                     </div>
                   </button>
 
@@ -69,7 +69,7 @@ const Work = () => {
                     <div className='flex gap-3 mt-2 justify-center flex-wrap'>
                       {project.techIcons.map((icon, i) => (
                         <div className='w-6 h-6 grid items-center bg-background p-1 rounded-lg' key={i}>
-                          <img src={icon} alt='tech icon' />
+                          <img src={icon} alt='tech icon' loading="lazy" />
                         </div>
                       ))}
                     </div>
