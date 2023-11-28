@@ -55,6 +55,19 @@ import muiIcon from '../images/icons/mui.png';
 import graphqlIcon from '../images/icons/graphql.png';
 import socketIOIcon from '../images/icons/socket-io.png';
 import reactRouterIcon from '../images/icons/react-router.png';
+import htmlIcon from '../images/icons/html.png';
+import cssIcon from '../images/icons/css.png';
+import tailwindCSSIcon from '../images/icons/tailwind-css.png';
+import expressIcon from '../images/icons/express.png';
+import gitIcon from '../images/icons/git.png';
+import javascriptIcon from '../images/icons/javascript.png';
+import typescriptIcon from '../images/icons/typescript.png';
+import mongodbIcon from '../images/icons/mongo-db.png';
+import nodeJSIcon from '../images/icons/nodejs.png';
+import postgresqlIcon from '../images/icons/postgresql.png';
+import prismaIcon from '../images/icons/prisma.png';
+import redisIcon from '../images/icons/redis.png';
+import pythonIcon from '../images/icons/python.png';
 
 export const navLinks = [
   {
@@ -206,4 +219,95 @@ export const socialLinks = [
     icon: instagramIcon,
     link: `https://instagram.com/iamsk_.04?igshid=MzMyNGUyNmU2YQ==`
   }
+];
+
+export const technologies = [
+  {
+    name: 'React JS',
+    icon: reactJSIcon,
+  },
+  {
+    name: 'Next JS',
+    icon: nextJSIcon,
+  },
+  {
+    name: 'Gatsby',
+    icon: gatsbyJSIcon,
+  },
+  {
+    name: 'React Native',
+    icon: reactJSIcon,
+  },
+  {
+    name: 'Node JS',
+    icon: nodeJSIcon,
+  },
+  {
+    name: 'Express JS',
+    icon: expressIcon,
+  },
+  {
+    name: 'Mongo DB',
+    icon: mongodbIcon,
+  },
+  {
+    name: 'PostgreSQL',
+    icon: postgresqlIcon,
+  },
+  {
+    name: 'Material UI',
+    icon: muiIcon,
+  },
+  {
+    name: 'Bootstrap',
+    icon: bootstrapIcon,
+  },
+  {
+    name: 'TailwindCSS',
+    icon: tailwindCSSIcon,
+  },
+  {
+    name: 'HTML',
+    icon: htmlIcon,
+  },
+  {
+    name: 'CSS',
+    icon: cssIcon,
+  },
+  {
+    name: 'Redux Toolkit',
+    icon: reduxIcon,
+  },
+  {
+    name: 'React Router',
+    icon: reactRouterIcon,
+  },
+  {
+    name: 'React Hook Form',
+    icon: reactHookFormIcon,
+  },
+  {
+    name: 'Prisma',
+    icon: prismaIcon,
+  },
+  {
+    name: 'Redis',
+    icon: redisIcon,
+  },
+  {
+    name: 'Git',
+    icon: gitIcon,
+  },
+  {
+    name: 'JavaScript',
+    icon: javascriptIcon,
+  },
+  {
+    name: 'TypeScript',
+    icon: typescriptIcon,
+  },
+  {
+    name: 'Python',
+    icon: pythonIcon,
+  },
 ];

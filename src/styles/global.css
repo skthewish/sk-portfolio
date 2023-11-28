@@ -30,6 +30,12 @@
   background: linear-gradient(to right, #434343, #000000);
 }
 
+.white-gradient {
+  background: #0f172a;
+  background: -webkit-linear-gradient(to bottom, #fff, #0f172a);
+  background: linear-gradient(to bottom, #fff, #0f172a);
+}
+
 .banner-head-text {
   @apply text-4xl md:text-6xl text-txt dark:text-dark-txt font-Agbalumo;
 }

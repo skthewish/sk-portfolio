@@ -153,9 +153,10 @@ const Contact = () => {
                       alt={item.id}
                       key={item.id}
                       className='h-10 md:h-[60px]'
+                      loading="lazy"
                     />
                   ) : (
-                    <img src={item.icon} alt={item.id} key={item.id} className='h-10 md:h-[60px]' />
+                    <img src={item.icon} alt={item.id} key={item.id} className='h-10 md:h-[60px]' loading="lazy" />
                   )}
                 </motion.div>
               </a>

@@ -59,6 +59,7 @@ function ExperienceCard({ experience }) {
             src={experience.icon}
             alt={experience.companyName}
             className='w-[60%] h-[60%] object-contain opacity-80'
+            loading="lazy"
           />
         </div>
       }
