@@ -105,7 +105,7 @@ const Contact = () => {
                 />
               </label>
               <label className='flex flex-col flex-1'>
-                <span className='input-label'>Your email</span>
+                <span className='input-label'>Your Email</span>
                 <input
                   type='email'
                   name='email'

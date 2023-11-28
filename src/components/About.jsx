@@ -18,7 +18,7 @@ const About = () => {
         className='text-center flex flex-col'
       >
         <motion.h1 variants={zoomIn(0, 0.5)} className='section-head-text'>
-          Introduction
+          Overview
         </motion.h1>
 
         <motion.p
