@@ -14,7 +14,7 @@ const About = () => {
       <motion.div
         initial='offscreen'
         whileInView='onscreen'
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.4 }}
         className='text-center flex flex-col'
       >
         <motion.h1 variants={zoomIn(0, 0.5)} className='section-head-text'>
@@ -45,7 +45,7 @@ const About = () => {
       <motion.div
         initial='offscreen'
         whileInView='onscreen'
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.4 }}
         className='flex flex-col md:flex-row gap-8 justify-center items-center mt-8'
       >
         {services.map((service, i) => (
@@ -85,12 +85,12 @@ const About = () => {
       <motion.div
         initial='offscreen'
         whileInView='onscreen'
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
+        variants={bounceUp(50, 0, 0.4, 1)}
         className='flex flex-wrap mt-[30px] gap-2 justify-center'
       >
         {technologies.map((tech, i) => (
-          <motion.div
-            variants={bounceUp(50, 0.1 * i, 0.4, 1)}
+          <div
             key={tech.name}
           >
             <div className='h-[100px] md:h-[120px] w-[100px] md:w-[120px] rounded-full flex flex-col items-center justify-center md:px-2 py-3 md:py-6'>
@@ -101,7 +101,7 @@ const About = () => {
                 {tech.name}
               </span>
             </div>
-          </motion.div>
+          </div>
         ))}
       </motion.div>
     </section>
