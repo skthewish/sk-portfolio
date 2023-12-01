@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { bounceUp, zoomIn } from '../utils/motion';
+import { bounceUp, ease } from '../utils/motion';
 import emailjs from '@emailjs/browser';
 import { socialLinks } from '../constants';
 import useTheme from '../utils/useTheme';
@@ -75,7 +75,7 @@ const Contact = () => {
     <section id='contact' className='container w-full px-8 pt-[68px] flex items-center justify-center'>
       <div className='text-center flex flex-col items-center w-full'>
         <motion.div initial='offscreen' whileInView='onscreen' viewport={{ once: true, amount: 0.6 }}>
-          <motion.h1 variants={zoomIn(0, 1)} className='section-head-text'>
+          <motion.h1 variants={ease(0, 0.5)} className='section-head-text'>
             Get in touch
           </motion.h1>
         </motion.div>
@@ -87,7 +87,7 @@ const Contact = () => {
           className='py-8 md:p-8 w-full'
         >
           <motion.form
-            variants={zoomIn(0, 1)}
+            variants={ease(0, 1)}
             ref={formRef}
             onSubmit={handleSubmit}
             className='flex gap-4 max-w-4xl flex-col mx-auto'

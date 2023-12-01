@@ -10,17 +10,14 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import { projects } from '../constants';
 import Card from './atomic/Card';
 import gallery from '../images/icons/gallery.png';
-import { bounceUp, zoomIn } from '../utils/motion';
+import { bounceUp, ease } from '../utils/motion';
 
 const Work = () => {
   const [open, setOpen] = React.useState(false);
   const [slides, setSlides] = React.useState([]);
 
   return (
-    <motion.section
-      initial='offscreen'
-      whileInView='onscreen'
-      viewport={{ once: true, amount: 0.6 }}
+    <section
       id='work'
       className='container w-full px-8 pt-[68px] lg:pb-[50px] flex items-center justify-center'
     >
@@ -29,7 +26,7 @@ const Work = () => {
           initial='offscreen'
           whileInView='onscreen'
           viewport={{ once: true, amount: 0.6 }}
-          variants={zoomIn(0, 1)}
+          variants={ease(0, 0.5)}
           className='section-head-text'
         >
           Projects
@@ -92,7 +89,7 @@ const Work = () => {
           <Lightbox open={open} close={() => setOpen(false)} slides={slides} plugins={[Zoom, Thumbnails]} />
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
