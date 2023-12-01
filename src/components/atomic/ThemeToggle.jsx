@@ -24,7 +24,7 @@ const ThemeToggle = () => {
                 changeTheme('dark');
               }
             }}
-            className='h-8 w-8 p-1 dark:p-[6px] inline-block cursor-pointer border border-dark-background dark:border-background rounded-full'
+            className='h-8 w-8 p-1 dark:p-[6px] inline-block cursor-pointer rounded-full'
           >
             {theme === 'light' && <img src={moonImg} alt='dark' className='object-contain' />}
             {theme === 'dark' && <img src={sunImg} alt='light' className='object-contain' />}

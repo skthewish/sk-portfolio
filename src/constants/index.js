@@ -91,17 +91,17 @@ export const navLinks = [
 export const services = [
   {
     id: 1,
-    title: `Web App\nDeveloper`,
+    title: `React JS\nDeveloper`,
     icon: web
   },
   {
     id: 2,
-    title: `Website\nDeveloper`,
+    title: `Static Website\nDeveloper`,
     icon: website
   },
   {
     id: 3,
-    title: `Full Stack\nDeveloper`,
+    title: `MERN/PERN\nDeveloper`,
     icon: fullStack
   }
 ];
@@ -189,7 +189,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: `Klimates Landing Page`,
+    title: `Klimates Static Website`,
     icon: klimates,
     link: `https://www.klimates.earth/`,
     images: [

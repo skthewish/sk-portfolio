@@ -68,3 +68,20 @@ export const ease = (delay, duration) => {
     }
   };
 };
+
+export const loop = (delay, duration) => {
+  return {
+    offscreen: {
+      opacity: 0
+    },
+    onscreen: {
+      opacity: 1,
+      transition: {
+        type: 'tween',
+        delay: delay,
+        duration: duration,
+        ease: 'easeOut'
+      }
+    }
+  };
+};

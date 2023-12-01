@@ -5,7 +5,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../constants';
 import useTheme from '../utils/useTheme';
-import { zoomIn } from '../utils/motion';
+import { ease } from '../utils/motion';
 
 const Experience = () => {
   const { theme } = useTheme();
@@ -13,10 +13,7 @@ const Experience = () => {
     <section id='experience' className='container min-h-screen w-full px-8 pt-[68px] flex items-center justify-center'>
       <div className='text-center flex flex-col items-center'>
         <motion.div initial='offscreen' whileInView='onscreen' viewport={{ once: true, amount: 0.6 }}>
-          <motion.h4 variants={zoomIn(0, 0.5)} className='section-sub-text'>
-            What I have done so far
-          </motion.h4>
-          <motion.h1 variants={zoomIn(0, 0.5)} className='section-head-text'>
+          <motion.h1 variants={ease(0, 0.5)} className='section-head-text'>
             Work Experience
           </motion.h1>
         </motion.div>
